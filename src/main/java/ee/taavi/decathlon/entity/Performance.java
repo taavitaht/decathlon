@@ -18,6 +18,6 @@ public class Performance {
     @ManyToOne
     private Athlete athlete;
     private String event;
-    private double performance;
+    private Double performance;
     private int points;
 }
