@@ -21,7 +21,7 @@ public class AthleteController {
 
     @PostMapping("athletes")
     public Athlete addAthlete(@RequestBody Athlete athlete){
-        if(athlete.getName() != null || athlete.getName().isEmpty()){
+        if(athlete.getName() == null || athlete.getName().isEmpty()){
             throw new RuntimeException("No name was provided");
         }
         if(athlete.getNation() == null || athlete.getNation().isEmpty()){

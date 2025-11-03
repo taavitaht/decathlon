@@ -37,7 +37,7 @@ public class PerformanceController {
         if(performance.getPerformance() == null || performance.getPerformance() <= 0){
             throw new RuntimeException("Performance must be provided");
         }
-        int points = ScoringService.calculatePoints(performance.getEvent(), performance.getPerformance());
+        int points = scoringService.calculatePoints(performance.getEvent(), performance.getPerformance());
         performance.setPoints(points);
         return performanceRepository.save(performance);
     }
